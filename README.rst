@@ -15,9 +15,12 @@ everything, is clean, simple and well documentated.
 Roadmap
 -------
 
-Upnext: - Configure system settings like Finder, MagicTrackpad and
-Screensaver. - Install and configure `Homebrew`_ and `Homebrew Cask`_ -
-Install VLC and configure support for BluRays.
+Upnext:
+
+* Configure system settings like Finder, MagicTrackpad and
+  Screensaver.
+* Install and configure `Homebrew`_ and `Homebrew Cask`_ -
+* Install VLC and configure support for BluRays.
 
 Why not Ansible?
 ----------------
