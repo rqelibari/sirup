@@ -1,0 +1,3 @@
+# Docs
+Sphinx==1.5.3
+flake8==3.3.0
