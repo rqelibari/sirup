@@ -34,7 +34,7 @@ To find out what's new in this version of Sirup, please see `the changelog
 <http://github.com/rqelibari/sirup/changelog.html#%s>`_.
 
 %s
-""" % (version, open('README.md').read())
+""" % (version, open('README.rst').read())
 
 setup(
     name='sirup',
