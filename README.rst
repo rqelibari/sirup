@@ -4,7 +4,7 @@ Sirup
 Sirup is a Python (3.6+) task execution tool, build upon `Invoke`_. It
 automates my `MBP`_ setup, configuration and management.
 
-Based of Invoke
+Based on Invoke
 -------------------
 
 `Invoke`_ is a great tool and life enhancer! Being still in its
