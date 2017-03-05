@@ -54,7 +54,8 @@ setup(
     extras_require={
         'dev': [
             'flake8',
-            'Sphinx'
+            'Sphinx',
+            'pytest'
         ]
     },
     classifiers=[
