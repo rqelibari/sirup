@@ -23,12 +23,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    packages=find_packages(),
-    install_requires=[
+    packages = find_packages(),
+    install_requires = [
         'invoke'
     ],
-    setup_requires=['pytest-runner'],
-    extras_require={
+    setup_requires = ['pytest-runner'],
+    extras_require = {
         'dev': [
             'flake8',
             'Sphinx',
