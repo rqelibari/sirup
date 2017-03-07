@@ -20,6 +20,7 @@
 """
 
 from invoke import Collection, task
+from invocations.watch import watch
 import pytest
 
 
@@ -48,6 +49,26 @@ def test(c, module=None, opts=None):
     pytest.main(args)
 
 
+@task(name="watch")
+def watch_tests(c, module=None, opts=None):
+    """
+    Watch source tree and test tree for changes, rerunning tests as necessary.
+    Honors ``tests.package`` setting re: which source directory to watch for
+    changes.
+    """
+    package = c.config.get('tests', {}).get('package')
+    patterns = ['\./tests/']
+    if package:
+        patterns.append('\./{0}/'.format(package))
+    kwargs = {'module': module, 'opts': opts}
+    # Kick things off with an initial test (making sure it doesn't exit on its
+    # own if tests currently fail)
+    c.config.run.warn = True
+    test(c, **kwargs)
+    # Then watch
+    watch(c, test, patterns, ['.*/\..*\.swp'], **kwargs)
+
+
 @task
 def coverage(c, html=True):
     """
@@ -64,7 +85,7 @@ def coverage(c, html=True):
 
 
 ns = Collection(
-    test, coverage
+    test, coverage, watch_tests
 )
 ns.configure({
     'tests': {
