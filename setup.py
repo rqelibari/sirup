@@ -20,10 +20,9 @@
 """
 
 # Support setuptools only, distutils has a divergent and more annoying API
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    packages = find_packages(),
     install_requires = [
         'invoke'
     ],
