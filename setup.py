@@ -21,17 +21,4 @@
 
 # Support setuptools only, distutils has a divergent and more annoying API
 from setuptools import setup
-
-setup(
-    install_requires = [
-        'invoke'
-    ],
-    setup_requires = ['pytest-runner'],
-    extras_require = {
-        'dev': [
-            'flake8',
-            'Sphinx',
-            'pytest'
-        ]
-    }
-)
+setup()
