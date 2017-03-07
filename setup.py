@@ -22,31 +22,7 @@
 # Support setuptools only, distutils has a divergent and more annoying API
 from setuptools import setup, find_packages
 
-# Version info -- read without importing
-_locals = {}
-with open('sirup/_version.py') as fp:
-    exec(fp.read(), None, _locals)
-version = _locals['__version__']
-
-# Frankenstein long_description: version-specific changelog note + README
-long_description = """
-To find out what's new in this version of Sirup, please see `the changelog
-<http://github.com/rqelibari/sirup/changelog.html#%s>`_.
-
-%s
-""" % (version, open('README.rst').read())
-
 setup(
-    name='sirup',
-    version=version,
-    description='Pythonic task execution',
-    license='BSD',
-
-    long_description=long_description,
-    author='Rezart Qelibari',
-    author_email='rqelibari@users.noreply.github.com',
-    url='https://github.com/rqelibari/sirup',
-
     packages=find_packages(),
     install_requires=[
         'invoke'
