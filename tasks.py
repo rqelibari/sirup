@@ -48,8 +48,23 @@ def test(c, module=None, opts=None):
     pytest.main(args)
 
 
+@task
+def coverage(c, html=True):
+    """
+    Run tests w/ coverage enabled, optionally generating HTML & opening it.
+    :param bool html:
+        Whether to generate & open an HTML report. Default: ``True``.
+    """
+    # Generate actual coverage data. NOTE: this will honor a local .coveragerc
+    package = c.config.get('tests', {}).get('package')
+    test_opts = "--cov-config=.coveragerc , --cov=%s" % package
+    test(c, opts=test_opts)
+    if html:
+        c.run("coverage html && open htmlcov/index.html")
+
+
 ns = Collection(
-    test
+    test, coverage
 )
 ns.configure({
     'tests': {
