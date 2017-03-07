@@ -51,6 +51,7 @@ setup(
     install_requires=[
         'invoke'
     ],
+    setup_requires=['pytest-runner'],
     extras_require={
         'dev': [
             'flake8',
