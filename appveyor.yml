@@ -24,4 +24,4 @@ install:
 build: off
 
 test_script:
-  - "python setup.py test"
+  - "if exist tests/*.py python setup.py test"
