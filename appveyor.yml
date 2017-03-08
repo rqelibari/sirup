@@ -18,7 +18,7 @@ install:
   - "mklink /d \"C:\\Program Files\\Python\" %PYTHON%"
   - "SET PYTHON=\"C:\\Program Files\\Python\""
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
-  - "python -m pip install -U pip setuptools"
+  - "python -m pip install -I setuptools"
   - "python -m pip install -r dev-requirements.txt"
 
 build: off
