@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+
+install: "pip install -r dev-requirements.txt"
+# command to run tests
+script: '[ "$(ls -A ./tests)" ] && python setup.py test'
