@@ -6,6 +6,8 @@ python:
   - "3.6"
   - "nightly"
 
-install: "pip install -r dev-requirements.txt"
+install:
+  - "pip install -IU setuptools"
+  - "pip install -r dev-requirements.txt"
 # command to run tests
-script: '[ "$(ls -A ./tests)" ] && python setup.py test'
+script: 'python setup.py test || [ $? -eq 5 ] && echo "No tests"'
