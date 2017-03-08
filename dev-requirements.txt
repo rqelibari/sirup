@@ -1,3 +1,5 @@
 --index-url https://pypi.python.org/simple/
 -r requirements.txt
+-e .[tests]
+-e .[checkstyle]
 -e .[docs]

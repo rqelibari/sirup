@@ -3,17 +3,25 @@ environment:
   matrix:
     - PYTHON: "C:\\Python33"
     - PYTHON: "C:\\Python34"
+    - PYTHON: "C:\\Python35"
+    - PYTHON: "C:\\Python36"
     - PYTHON: "C:\\Python33-x64"
     - PYTHON: "C:\\Python34-x64"
+    - PYTHON: "C:\\Python35-x64"
+    - PYTHON: "C:\\Python36-x64"
 
 init:
   - "echo Testing with %PYTHON%"
 
 install:
-  - "%PYTHON%\\python.exe -m pip install --upgrade pip"
-  - "%PYTHON%\\python.exe -m pip install -r dev-requirements.txt"
+  # symlink python from a directory with a space
+  - "mklink /d \"C:\\Program Files\\Python\" %PYTHON%"
+  - "SET PYTHON=\"C:\\Program Files\\Python\""
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "python -m pip install -U pip setuptools"
+  - "python -m pip install -r dev-requirements.txt"
 
 build: off
 
 test_script:
-  - "%PYTHON%\\python.exe setup.py test"
+  - "python setup.py test"
