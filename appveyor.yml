@@ -19,9 +19,14 @@ install:
   - "SET PYTHON=\"C:\\Program Files\\Python\""
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python -m pip install -I setuptools"
-  - "python -m pip install -r dev-requirements.txt"
+  - "python -m pip install -e '.'"
+  - "python -m pip install -e '.[tests]'"
+  - "python -m pip install -e '.[docs]'"
+  - "python -m pip install -e '.[checkstyle]'"
 
 build: off
 
 test_script:
+  - "flake8"
   - "if exist tests/*.py python setup.py test"
+  - "docs/make.bat"
