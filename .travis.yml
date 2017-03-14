@@ -12,10 +12,10 @@ branches:
 
 install:
   - "pip install -IU setuptools"
-  - "pip install -e ."
-  - "pip install -e '.[tests]'"
-  - "pip install -e '.[docs]'"
-  - "pip install -e '.[checkstyle]'"
+  - "pip install ."
+  - "pip install '.[tests]'"
+  - "pip install -U '.[docs]'"
+  - "pip install '.[checkstyle]'"
   - "pip install codecov"
 # command to run tests
 script:
