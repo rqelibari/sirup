@@ -1,6 +1,12 @@
 Sirup
 =====
 
+.. image:: https://travis-ci.org/rqelibari/sirup.svg?branch=master
+    :target: https://travis-ci.org/rqelibari/sirup
+
+.. image:: https://ci.appveyor.com/api/projects/status/cumkt0u3ya0uky62/branch/master?svg=true
+    :target: https://ci.appveyor.com/project/rqelibari/sirup
+
 Sirup is a Python (3.6+) task execution tool, build upon `Invoke`_. It
 automates my `MBP`_ setup, configuration and management.
 
