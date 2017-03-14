@@ -25,4 +25,4 @@ script:
   - 'cd docs; make html'
 
 after_success:
-  - codecov --token=${CODECOV_UPLOADTOKEN}
+  - codecov
