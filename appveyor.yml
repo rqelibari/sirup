@@ -20,9 +20,9 @@ install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "python -m pip install -I setuptools"
   - "python -m pip install -e %APPVEYOR_BUILD_FOLDER%"
-  - "python -m pip install -e '%APPVEYOR_BUILD_FOLDER%[tests]'"
-  - "python -m pip install -e '%APPVEYOR_BUILD_FOLDER%[docs]'"
-  - "python -m pip install -e '%APPVEYOR_BUILD_FOLDER%[checkstyle]'"
+  - "python -m pip install -e %APPVEYOR_BUILD_FOLDER%[tests]"
+  - "python -m pip install -e %APPVEYOR_BUILD_FOLDER%[docs]"
+  - "python -m pip install -e %APPVEYOR_BUILD_FOLDER%[checkstyle]"
 
 build: off
 
