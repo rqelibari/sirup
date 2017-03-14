@@ -22,4 +22,3 @@
 # Support setuptools only, distutils has a divergent and more annoying API
 from setuptools import setup
 setup()
-
