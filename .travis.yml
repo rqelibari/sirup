@@ -22,8 +22,7 @@ install:
 # command to run tests
 script:
   - 'flake8'
-  - 'python setup.py test || [ $? -eq 5 ] && echo "No tests"'
-  - 'invoke coverage --no-html'
+  - 'python -m pytest --cov=sirup --cov-report html --cov-config=.coveragerc  || [ $? -eq 5 ] && echo "No tests"'
   - 'cd docs; make html'
 
 after_success:
