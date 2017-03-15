@@ -12,6 +12,7 @@ branches:
 
 install:
   - "pip install -IU setuptools"
+  - "pip install -IU pip"
   - "pip install ."
   - "pip install '.[tests]'"
   - "pip install -U '.[docs]'"
