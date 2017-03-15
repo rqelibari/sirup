@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    _version.py - Keep track of sirups current version.
+    __init__.py - Offer basic data to importers (e.g. other modules).
     Part of sirup project
 
     (c) 2017 Copyright Rezart Qelibari <rqelibari@users.noreply.github.com>
@@ -19,5 +19,4 @@
     limitations under the License.
 """
 
-__version_info__ = (0, 1, 0)
-__version__ = '.'.join(map(str, __version_info__))
+from ._version import __version_info__, __version__  # noqa
