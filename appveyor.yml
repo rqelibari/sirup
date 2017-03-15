@@ -33,4 +33,4 @@ build: off
 test_script:
   - "flake8"
   - "if exist tests/*.py python setup.py test"
-  - "docs/make.bat"
+  - "docs/make.bat html"
