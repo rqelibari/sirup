@@ -3,12 +3,19 @@ Sirup
 
 .. image:: https://travis-ci.org/rqelibari/sirup.svg?branch=master
     :target: https://travis-ci.org/rqelibari/sirup
+    :alt: Code Integration Status on UNIX/Linux
 
 .. image:: https://ci.appveyor.com/api/projects/status/cumkt0u3ya0uky62/branch/master?svg=true
     :target: https://ci.appveyor.com/project/rqelibari/sirup
+    :alt: Code Integration Status on Windows
 
 .. image:: https://codecov.io/gh/rqelibari/sirup/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/rqelibari/sirup
+    :target: https://codecov.io/gh/rqelibari/sirup
+    :alt: Code Coverage Status
+
+.. image:: https://readthedocs.org/projects/sirup/badge/?version=latest
+    :target: http://sirup.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 Sirup is a Python (3.6+) task execution tool, build upon `Invoke`_. It
 automates my `MBP`_ setup, configuration and management.
