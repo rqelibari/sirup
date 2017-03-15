@@ -12,11 +12,12 @@ branches:
 
 install:
   - "pip install -IU setuptools"
+  # Update pip for Python <= 3.4, so it supports install without -e tag
   - "pip install -IU pip"
   - "pip install ."
   - "pip install '.[tests]'"
-  - "pip install -U '.[docs]'"
   - "pip install '.[checkstyle]'"
+  - "pip install -U '.[docs]'"
   - "pip install codecov"
 # command to run tests
 script:
